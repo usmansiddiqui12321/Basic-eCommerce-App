@@ -105,7 +105,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         bottomNavigationBar: BottomAppBar(
-          
             color: Colors.white70,
             child: Row(
               mainAxisSize: MainAxisSize.max,
@@ -182,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget productcard(int index, dynamic press) {
+  Widget productcard(int index, VoidCallback press) {
     return GestureDetector(
       onTap: press,
       child: Container(
@@ -272,9 +271,13 @@ class _HomeScreenState extends State<HomeScreen> {
               child: IconButton(
                 onPressed: () {
                   setState(() {
-                    cartlist.add(
-                      productlist[index],
-                    );
+                    if (cartlist.contains(productlist[index])) {
+                      null;
+                    } else {
+                      cartlist.add(
+                        productlist[index],
+                      );
+                    }
                   });
                 },
                 icon: const Icon(

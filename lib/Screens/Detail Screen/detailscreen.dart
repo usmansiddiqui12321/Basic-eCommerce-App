@@ -37,7 +37,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ),
           Center(
-            child: cartlist.length == 0
+            child: cartlist.isEmpty
                 ? Container(
                     width: 0,
                   )
@@ -66,9 +66,7 @@ class _DetailScreenState extends State<DetailScreen> {
       body: Column(
         children: [
           Expanded(
-            child: Container(
-              child: Image.asset(widget.product.img),
-            ),
+            child: Image.asset(widget.product.img),
           ),
           Expanded(
             child: Column(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:dsaproject/Screens/login_screen/loginscreen.dart';
 import 'package:dsaproject/Screens/splashscreen.dart';
+
+import 'Screens/Home Screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: HomeScreen(),
     );
   }
 }
