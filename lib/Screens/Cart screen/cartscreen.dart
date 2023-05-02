@@ -13,7 +13,6 @@ class CartScreen extends StatefulWidget {
 
 class _CartScreenState extends State<CartScreen> {
   int quantity = 1;
-  int indexselected = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

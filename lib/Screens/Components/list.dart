@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class CategoryDetail {
   final name;
   final img;
@@ -30,22 +31,25 @@ class Products {
   final discount;
   final int price;
   bool isselected;
-  Products({
-    required this.name,
-    required this.img,
-    required this.discount,
-    required this.price,
-    required this.isselected,
-  });
+  bool isselectedcart;
+  Products(
+      {required this.name,
+      required this.img,
+      required this.discount,
+      required this.price,
+      required this.isselected,
+      required this.isselectedcart});
 }
-    class product {
+
+class product {
   final String img;
   final String name;
   product({
-  required this.img,
-  required this.name,
-});
+    required this.img,
+    required this.name,
+  });
 }
+
 List<Products> productlist = [
   Products(
     name: "Nike Shoes",
@@ -53,17 +57,20 @@ List<Products> productlist = [
     discount: 30,
     price: 119,
     isselected: false,
+    isselectedcart: false,
   ),
   Products(
     name: "Adidas Shoes",
     img: "images/s2.jpg",
     discount: 10,
+    isselectedcart: false,
     price: 99,
     isselected: false,
   ),
   Products(
     name: "Men Suit",
     img: "images/su1.png",
+    isselectedcart: false,
     discount: 20,
     price: 399,
     isselected: false,
@@ -73,6 +80,7 @@ List<Products> productlist = [
     img: "images/trouser1.png",
     discount: 15,
     price: 259,
+    isselectedcart: false,
     isselected: false,
   ),
   Products(
@@ -80,10 +88,12 @@ List<Products> productlist = [
     img: "images/w1.jpg",
     discount: 35,
     price: 189,
+    isselectedcart: false,
     isselected: false,
   ),
   Products(
     name: "Rado Watch",
+    isselectedcart: false,
     img: "images/w2.jpg",
     discount: 16,
     price: 299,
@@ -92,6 +102,7 @@ List<Products> productlist = [
   Products(
     name: "T-Shirt",
     img: "images/tshir.jpg",
+    isselectedcart: false,
     discount: 22,
     price: 59,
     isselected: false,
@@ -100,6 +111,7 @@ List<Products> productlist = [
     name: "Men's Shuit",
     img: "images/su.png",
     discount: 11,
+    isselectedcart: false,
     price: 159,
     isselected: false,
   ),
@@ -117,7 +129,15 @@ List<String> productlst = [
   "Men Suit",
   "Adidas Shoes",
   "Nike Shoes",
-
 ];
-List<num> PriceList = [450,213,600,122,555,444,777,99];//used in home_screen
+List<num> PriceList = [
+  450,
+  213,
+  600,
+  122,
+  555,
+  444,
+  777,
+  99
+];//used in home_screen
 

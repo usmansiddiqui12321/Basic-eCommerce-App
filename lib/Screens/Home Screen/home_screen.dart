@@ -15,7 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int indexselected = 0;
+  // bool isSelected = false ;
   bool isDescending = false;
   @override
   Widget build(BuildContext context) {
@@ -271,18 +271,22 @@ class _HomeScreenState extends State<HomeScreen> {
               child: IconButton(
                 onPressed: () {
                   setState(() {
-                    if (cartlist.contains(productlist[index])) {
-                      null;
+                    if (cartlist.contains(productlist[index]) &&
+                        productlist[index].isselectedcart == true) {
+                      cartlist.remove(productlist[index]);
+                      productlist[index].isselectedcart = false;
                     } else {
-                      cartlist.add(
-                        productlist[index],
-                      );
+                      cartlist.add(productlist[index]);
+
+                      productlist[index].isselectedcart = true;
                     }
                   });
                 },
-                icon: const Icon(
+                icon: Icon(
                   Icons.shopping_cart,
-                  color: Colors.orange,
+                  color: productlist[index].isselectedcart
+                      ? Colors.orange
+                      : Colors.black,
                 ),
               ),
             )
