@@ -68,7 +68,6 @@ class _CartScreenState extends State<CartScreen> {
           )
         ],
       ),
-   
     );
   }
 
@@ -107,10 +106,11 @@ class _CartScreenState extends State<CartScreen> {
                 onPressed: () {
                   setState(() {
                     cartlist.removeAt(index);
+                    productlist[index].isselectedcart = false;
                   });
                 },
                 icon: const Icon(
-                  Icons.delete,
+                  Icons.delete_forever,
                   color: Colors.black,
                 )),
           ),
