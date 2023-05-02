@@ -196,7 +196,7 @@ class _CartScreenState extends State<CartScreen> {
                     },
                     icon: Icon(
                       Icons.add,
-                      color: black,
+                      color: black
                     ),
                   ),
                 ],
